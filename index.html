@@ -1,0 +1,571 @@
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>أسرة معلم الأجيال 2026-2027</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html,body{width:100%;max-width:100%;overflow-x:hidden}body{font-family:Tahoma,Arial,sans-serif;background:linear-gradient(135deg,#fffdf7,#f6eedc);color:#493d2d}button,input,select,textarea{font:inherit}button{cursor:pointer}.hide{display:none!important}
+#welcome{position:fixed;inset:0;z-index:99;display:grid;place-items:center;background:radial-gradient(circle,#fffaf0,#f3e8cf)}.welcome{width:min(760px,92%);background:#fff;border:1px solid #dfca91;border-radius:36px;padding:55px 30px;text-align:center;box-shadow:0 30px 80px #5a441f1c}.cross{font-size:74px;color:#bb8e32;animation:f 3s ease-in-out infinite}@keyframes f{50%{transform:translateY(-10px)}}h1{color:#976f1e}.welcome h2{font-size:46px;margin:12px}.welcome p{color:#7d715f;line-height:2;margin:0 auto 25px;max-width:600px}.btn{border:0;border-radius:14px;padding:11px 16px;font-weight:700}.gold{background:linear-gradient(135deg,#c6a052,#8d681c);color:#fff}.light{background:#f7efd9;color:#88651d;border:1px solid #dec997}.green{background:#e5f4e9;color:#34754a}.red{background:#fae6e4;color:#a3413a}.blue{background:#e9eef8;color:#5270a9}
+#app{display:none}.app{min-height:100vh}.side{position:fixed;right:0;top:0;width:270px;height:100vh;background:#fffefb;border-left:1px solid #e3d4af;padding:20px 15px;z-index:20;overflow-y:auto}.brand{text-align:center;border-bottom:1px solid #eee3cb;padding-bottom:20px;margin-bottom:18px}.brand .cross{font-size:35px}.brand h3{font-size:24px;color:#966f1d}.brand small{color:#8a7d69}.nav{display:grid;gap:7px}.nav button{border:0;background:transparent;text-align:right;padding:13px;border-radius:15px;color:#615546}.nav button.active,.nav button:hover{background:#f5e9c9;color:#916c20}.content{margin-right:270px;padding:18px;min-width:0}.top{position:sticky;top:8px;z-index:10;background:#fffffff2;border:1px solid #e6d7b4;border-radius:20px;padding:11px 13px;display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;box-shadow:0 10px 25px #5a441f0b}.top-left{display:flex;align-items:center;gap:10px}.menu{display:none}.title{font-size:21px;color:#916b20;font-weight:700}.name{width:180px;padding:9px 11px;border:1px solid #dccba3;border-radius:12px;background:#fffdf8}.page{display:none}.page.active{display:block}.hero,.panel,.stat{background:#fff;border:1px solid #e2d3b0;border-radius:25px;box-shadow:0 14px 35px #5a441f0b}.hero{padding:27px;margin-bottom:18px;background:linear-gradient(135deg,#fff,#fbf3df)}.hero h2{font-size:29px;color:#946d20;margin-bottom:8px}.hero p{color:#7c715f;line-height:2}.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:18px}.stat{padding:17px}.stat i{display:grid;place-items:center;width:46px;height:46px;border-radius:13px;background:#f6ead0;font-style:normal;font-size:22px;margin-bottom:10px}.stat small{color:#817462}.stat strong{display:block;font-size:28px;color:#916d20;margin-top:4px}.panel{padding:21px;margin-bottom:18px}.head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}.head h3{color:#916c20;font-size:20px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:15px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.field label{display:block;font-size:13px;font-weight:700;color:#6b6051;margin-bottom:6px}.field input,.field select,.field textarea,.search{width:100%;padding:12px;border:1px solid #ddcda7;border-radius:13px;background:#fffdf8;color:#453a2c;outline:0}.field textarea{min-height:115px;resize:vertical;line-height:1.9}.filters{display:grid;grid-template-columns:1fr 180px 170px auto;gap:9px;margin-bottom:15px}.filters select{padding:12px;border:1px solid #ddcda7;border-radius:13px;background:#fffdf8;color:#453a2c}.table{overflow:auto;border:1px solid #eee3cc;border-radius:15px}.table table{width:100%;min-width:700px;border-collapse:collapse}.table th{background:#faf2df;color:#7d5c20;text-align:right;padding:12px;white-space:nowrap}.table td{padding:12px;border-top:1px solid #eee6d6}.badge{display:inline-block;padding:6px 10px;border-radius:18px;font-size:12px;font-weight:700}.b0{background:#f0ede7;color:#84796c}.bp{background:#e4f4e8;color:#34764b}.ba{background:#fae6e4;color:#a54039}.att{display:grid;gap:7px}.attrow{display:grid;grid-template-columns:1fr 170px 250px;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #eee7d8}.attname strong{display:block}.attname small{color:#8b7f6e}.attbtns{display:flex;gap:6px;flex-wrap:wrap}.small{border:0;padding:8px 10px;border-radius:11px;font-size:12px;font-weight:700}.preview{background:#fffaf0;border:1px solid #e1ce9e;padding:18px;border-radius:18px;line-height:2}.preview h4{color:#906a20;font-size:24px;margin-bottom:8px}.preview .block{padding:10px 0;border-bottom:1px dashed #dccba1}.report{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:15px}.rbox{background:#fffaf0;border:1px solid #e2d0a2;border-radius:16px;padding:14px}.rbox small{color:#827563}.rbox b{display:block;color:#8f6b21;font-size:25px;margin-top:5px}.status-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}.status-card{display:grid;grid-template-columns:1fr 150px 210px;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #eee6d6}.status-name strong{display:block}.status-name small{color:#8b7f6e}.status-actions{display:flex;gap:7px;flex-wrap:wrap}.status-btn{border:0;border-radius:11px;padding:9px 12px;font-size:12px;font-weight:700}.done{background:#e5f4e9;color:#34764b}.notdone{background:#fae6e4;color:#a54039}.unset{background:#f0ede7;color:#84796c}.history-chip{display:inline-block;background:#f7efd9;color:#8a671f;border:1px solid #dfcda7;padding:6px 9px;border-radius:16px;font-size:12px}.share-mini{margin-top:10px}.hint{background:#fbf4e2;border:1px solid #e1ce9e;border-radius:16px;padding:13px;color:#6f624f;line-height:1.8;margin-bottom:15px}
+.empty{text-align:center;color:#8b7f6e;padding:18px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab{border:1px solid #dec997;background:#fffaf0;color:#88651d;border-radius:14px;padding:10px 15px;font-weight:700}.tab.active{background:linear-gradient(135deg,#c6a052,#8d681c);color:#fff;border-color:transparent}
+.prow{cursor:pointer}.prow:hover{background:#fffaf0}.pbig{font-size:19px;padding:8px 14px}
+.hist{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid #eee7d8}.hist small{display:block;color:#8b7f6e}.pos{color:#34764b;font-weight:800;font-size:18px}.neg{color:#a54039;font-weight:800;font-size:18px}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 14px}.chipbtn{border:1px solid #dfcda7;background:#f7efd9;color:#8a671f;border-radius:16px;padding:7px 14px;font-weight:700}
+.toast{position:fixed;left:20px;bottom:20px;background:#463b2f;color:#fff;padding:12px 15px;border-radius:13px;opacity:0;transform:translateY(8px);transition:.2s;z-index:4000}.toast.show{opacity:1;transform:none}.footer{text-align:center;color:#8a7e6d;font-size:12px;padding:5px 0 20px}
+@media(max-width:1100px){.stats{grid-template-columns:repeat(3,1fr)}.filters{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}.g4{grid-template-columns:1fr 1fr}.report{grid-template-columns:1fr 1fr}}
+@media(max-width:850px){.side{right:-280px;transition:.2s}.side.open{right:0}.content{margin-right:0}.menu{display:block;border:1px solid #dfcda5;background:#fffaf0;color:#87631b;width:43px;height:43px;border-radius:13px}.top .name,.top .btn{display:none}.g2{grid-template-columns:1fr}.attrow{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.g3,.g4,.filters,.report{grid-template-columns:1fr}.welcome h2{font-size:33px}.hero h2{font-size:24px}.panel{padding:17px}.stats{grid-template-columns:1fr 1fr}}
+
+@media (max-width: 850px){
+  .content{padding:10px}
+  .top{position:sticky;top:5px;padding:9px 10px;margin-bottom:12px}
+  .top-left{min-width:0}
+  .title{font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .panel{padding:14px;border-radius:18px}
+  .head{align-items:flex-start;flex-wrap:wrap}
+  .head > div{max-width:100%}
+  .head .btn{margin-bottom:4px}
+  .att-grid{grid-template-columns:1fr !important;align-items:stretch !important}
+  .att-grid .btn{width:100%}
+  .attrow{grid-template-columns:1fr !important;gap:8px;padding:13px 0}
+  .attbtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+  .attbtns .small{width:100%;min-height:40px;padding:8px 5px}
+  .status-card{grid-template-columns:1fr !important;gap:8px;padding:13px 0}
+  .status-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+  .status-btn{width:100%;min-height:40px;padding:8px 5px}
+  .table{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .table table{min-width:620px}
+  .hero .head{display:block}
+  .hero .head .btn{margin-top:12px;width:100%}
+}
+@media (max-width:580px){
+  .content{padding:8px}
+  .top{border-radius:15px}
+  .menu{width:40px;height:40px}
+  .title{font-size:16px}
+  .panel{padding:12px;border-radius:16px}
+  .hero{padding:18px}
+  .hero h2{font-size:22px}
+  .stats{grid-template-columns:1fr 1fr;gap:8px}
+  .stat{padding:12px}
+  .stat strong{font-size:23px}
+  .stat i{width:40px;height:40px}
+  .g2,.g3,.g4,.filters,.report{grid-template-columns:1fr}
+  .filters{gap:8px}
+  .filters .btn{width:100%}
+  .attbtns,.status-actions{grid-template-columns:1fr}
+  .attbtns .small,.status-btn{min-height:42px}
+  .tabs .tab{flex:1 1 100%}
+  .welcome{padding:35px 18px;border-radius:25px}
+  .welcome h2{font-size:28px}
+  .welcome p{font-size:14px}
+  .footer{padding-bottom:15px}
+  #aboutModal,#pointsModal{padding:10px !important}
+  #aboutModal > div{padding:22px 15px !important}
+}
+</style></head><body>
+
+<div id="welcome" class="hide"><div class="welcome"><div class="cross">✝</div><div style="letter-spacing:1px;color:#a17a2d">أسرة معلم الأجيال 2026-2027</div><h2>نظام خدام مدارس الأحد</h2><p>نظام واحد لتنظيم الخدام والفصول والحضور والغياب والنقاط والتحضير والتقارير.</p><button class="btn gold" onclick="enter()">دخول إلى النظام</button></div></div>
+
+<div id="app" style="display: block;">
+<aside class="side" id="side"><div class="brand"><div class="cross">✝</div><h3>أسرة معلم الأجيال 2026-2027</h3><small>خدمة مدارس الأحد</small></div>
+<div class="nav">
+<button class="active" onclick="go('home',this)">🏠 الرئيسية</button>
+<button onclick="go('students',this)">👥 الخدام والفصول</button>
+<button onclick="go('attendance',this)">✅ الحضور والغياب</button>
+<button onclick="go('prep',this)">📚 التحضير</button>
+<button onclick="go('homework',this)">📝 الواجب</button>
+<button onclick="go('reflection',this)">💭 التأمل</button>
+<button onclick="go('points',this)">⭐ النقاط</button>
+<button onclick="go('reports',this)">📊 التقارير</button>
+<button onclick="go('backup',this)">💾 النسخ والمشاركة</button>
+<button onclick="go('export',this)">📤 تصدير Excel</button>
+</div></aside>
+
+<main class="content"><div class="top"><div class="top-left"><button class="menu" onclick="toggle()">☰</button><div class="title" id="title">الرئيسية</div></div><div><input class="name" id="servant" placeholder="اسم الخادم" oninput="saveServant()"><button class="btn light" onclick="share()">مشاركة</button></div></div>
+
+<!-- الرئيسية -->
+<section class="page active" id="p-home"><div class="hero"><div class="head"><div><h2 id="hello">أهلاً بيك يا خادم ✝</h2><p>لوحة تحكم سريعة لمتابعة يوم الخدمة.</p><div style="margin-top:12px;color:#9a7528;font-weight:700">البرمجة والتطوير بواسطة بيشوي نادر وجيه</div></div><button class="btn gold" onclick="showAbout()">عن المطور</button></div></div>
+<div class="stats"><div class="stat"><i>👥</i><small>الخدام</small><strong id="ss">2</strong></div><div class="stat"><i>🏫</i><small>الفصول</small><strong id="sc">2</strong></div><div class="stat"><i>✅</i><small>حاضر اليوم</small><strong id="sp">0</strong></div><div class="stat"><i>❌</i><small>غائب اليوم</small><strong id="sa">0</strong></div><div class="stat"><i>📚</i><small>تحضير اليوم</small><strong id="sx">لا</strong></div></div>
+<div class="g2"><div class="panel"><div class="head"><h3>ملخص اليوم (مدارس الأحد)</h3><button class="btn gold" onclick="go('attendance',document.querySelectorAll('.nav button')[2])">فتح الحضور</button></div><div class="g3"><div class="field"><label>التاريخ</label><input type="date" id="homeDate" onchange="home()"></div><div class="field"><label>الفصل</label><select id="homeClass" onchange="home()"><option value="الكل">كل الفصول</option><option value="تالته اعدادي">تالته اعدادي</option><option value="تانيه اعدادي">تانيه اعدادي</option></select></div><div class="field"><label>الحالة</label><select id="homeStatus" onchange="home()"><option value="all">الكل</option><option value="present">الحاضرين</option><option value="absent">الغائبين</option></select></div></div></div>
+<div class="panel"><div class="head"><h3>تحضير اليوم</h3><button class="btn light" onclick="go('prep',document.querySelectorAll('.nav button')[3])">فتح التحضير</button></div><div id="homePrep" class="preview">لا يوجد تحضير محفوظ اليوم.</div></div></div>
+<div class="panel"><div class="head"><h3>آخر الخدام</h3></div><div id="homeKids"><div style="display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #eee7d7"><div><b>نادر</b><small style="display:block;color:#8b7d69">تالته اعدادي</small></div></div><div style="display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #eee7d7"><div><b>بيشوي</b><small style="display:block;color:#8b7d69">تانيه اعدادي</small></div></div></div></div></section>
+
+<!-- الخدام -->
+<section class="page" id="p-students">
+<div class="panel"><div class="head"><h3 id="formTitle">إضافة خادم</h3></div>
+<div class="g3">
+<div class="field"><label>الاسم</label><input id="newName" placeholder="اسم الخادم"></div>
+<div class="field"><label>الفصل</label><input id="newClass" placeholder="مثال: خامسة ابتدائي"></div>
+<div class="field"><label>الهاتف</label><input id="newPhone" placeholder="اختياري" inputmode="tel"></div>
+<div class="field"><label>تاريخ الميلاد</label><input type="date" id="newBirth"></div>
+<div class="field"><label>أب الاعتراف</label><input id="newConfessor" placeholder="اسم أب الاعتراف"></div>
+<div class="field"><label>الحالة الاجتماعية</label><select id="newMarital"><option value="">اختر...</option><option>أعزب</option><option>مخطوب</option><option>متزوج</option><option>أرمل</option></select></div>
+<div class="field"><label>العمل</label><input id="newJob" placeholder="الوظيفة أو الدراسة"></div>
+<div class="field" style="grid-column:span 2"><label>العنوان</label><input id="newAddress" placeholder="العنوان بالتفصيل"></div>
+</div>
+<div style="margin-top:14px"><button class="btn gold" id="addBtn" onclick="addStudent()">إضافة</button> <button class="btn light hide" id="cancelEdit" onclick="clearForm()">إلغاء التعديل</button></div></div>
+
+<div class="panel"><div class="head"><h3>البحث والإدارة</h3></div>
+<div class="filters"><input class="search" id="studentSearch" placeholder="ابحث باسم الخادم..." oninput="studentsView()"><select id="studentFilter" onchange="studentsView()"><option value="الكل">كل الفصول</option><option value="تالته اعدادي">تالته اعدادي</option><option value="تانيه اعدادي">تانيه اعدادي</option></select><select id="studentSort" onchange="studentsView()"><option value="name">بالاسم</option><option value="class">بالفصل</option><option value="new">الأحدث</option></select><button class="btn light" onclick="clearFilter()">مسح</button></div>
+<div class="table"><table style="min-width:1150px"><thead><tr><th>الاسم</th><th>الفصل</th><th>الهاتف</th><th>تاريخ الميلاد</th><th>أب الاعتراف</th><th>الحالة الاجتماعية</th><th>العمل</th><th>العنوان</th><th>النقاط</th><th>الإجراء</th></tr></thead><tbody id="studentsTable"><tr><td><b>بيشوي</b></td><td>تانيه اعدادي</td><td>01276613554</td><td>2026-10-09 <small style="color:#8b7f6e">(0 سنة)</small></td><td>ابونا ميخائيل</td><td>أعزب</td><td>دراسة</td><td>مؤسسة الذكاة شارع الفادي</td><td><span class="badge bp" style="cursor:pointer" onclick="openPoints('smv1czb58drry')">⭐ 140000000</span></td><td style="white-space:nowrap"><button class="small light" onclick="editStudent('smv1czb58drry')">تعديل</button> <button class="small red" onclick="delStudent('smv1czb58drry')">حذف</button></td></tr><tr><td><b>نادر</b></td><td>تالته اعدادي</td><td>01227176950</td><td>2026-10-08 <small style="color:#8b7f6e">(0 سنة)</small></td><td>ابونا صموئيل</td><td>متزوج</td><td>دراسة</td><td>شارع المتحرك</td><td><span class="badge b0" style="cursor:pointer" onclick="openPoints('smv1d0yw77wg9')">⭐ 0</span></td><td style="white-space:nowrap"><button class="small light" onclick="editStudent('smv1d0yw77wg9')">تعديل</button> <button class="small red" onclick="delStudent('smv1d0yw77wg9')">حذف</button></td></tr></tbody></table></div></div></section>
+
+<!-- الحضور -->
+<section class="page" id="p-attendance"><div class="panel"><div class="head"><h3>الحضور والغياب</h3><div><button class="btn green" onclick="markAll('present')">الكل حاضر</button> <button class="btn red" onclick="markAll('absent')">الكل غائب</button></div></div>
+<div class="tabs" id="attTabs"><button class="tab active" data-t="liturgy" onclick="setAttType('liturgy')">⛪ حضور القداس</button><button class="tab" data-t="school" onclick="setAttType('school')">🏫 حضور مدارس الأحد</button><button class="tab" data-t="prepatt" onclick="setAttType('prepatt')">📚 تحضير درس مدارس الأحد</button><button class="tab" data-t="meeting" onclick="setAttType('meeting')">🤝 حضور اجتماع الخدمة</button></div>
+<div class="att-grid" style="display:grid;grid-template-columns:180px 180px 1fr auto;gap:9px;align-items:end"><div class="field"><label>التاريخ</label><input type="date" id="attDate" onchange="attendanceView()"></div><div class="field"><label>الفصل</label><select id="attClass" onchange="attendanceView()"><option value="الكل">كل الفصول</option><option value="تالته اعدادي">تالته اعدادي</option><option value="تانيه اعدادي">تانيه اعدادي</option></select></div><div class="field"><label>بحث</label><input id="attSearch" placeholder="اسم الخادم..." oninput="attendanceView()"></div><button class="btn gold" onclick="attendanceView()">تحديث</button></div>
+<div id="attSummary" class="preview" style="margin:15px 0"><b>حضور مدارس الأحد</b> • 📅 2026-10-10 • ✅ حاضر: <b>0</b> • ❌ غائب: <b>0</b> • ⏳ لم يسجل: <b>2</b></div><div id="attList" class="att"><div class="attrow"><div class="attname"><strong>بيشوي</strong><small>تانيه اعدادي</small></div><div><span class="badge b0">لم يسجل</span></div><div class="attbtns"><button class="small green" onclick="setAtt('smv1czb58drry','present')">✅ حاضر</button><button class="small red" onclick="setAtt('smv1czb58drry','absent')">❌ غائب</button><button class="small light" onclick="clearAtt('smv1czb58drry')">↺ إزالة</button></div></div><div class="attrow"><div class="attname"><strong>نادر</strong><small>تالته اعدادي</small></div><div><span class="badge b0">لم يسجل</span></div><div class="attbtns"><button class="small green" onclick="setAtt('smv1d0yw77wg9','present')">✅ حاضر</button><button class="small red" onclick="setAtt('smv1d0yw77wg9','absent')">❌ غائب</button><button class="small light" onclick="clearAtt('smv1d0yw77wg9')">↺ إزالة</button></div></div></div></div></section>
+
+<!-- التحضير -->
+<section class="page" id="p-prep"><div class="panel"><div class="head"><h3>تحضير الدرس</h3><div><button class="btn light" onclick="sharePrep()">مشاركة</button> <button class="btn gold" onclick="savePrep()">حفظ</button></div></div><div class="g3"><div class="field"><label>التاريخ</label><input type="date" id="prepDate" onchange="loadPrep()"></div><div class="field"><label>الفصل</label><select id="prepClass" onchange="loadPrep()"><option value="عام">عام</option><option value="تالته اعدادي">تالته اعدادي</option><option value="تانيه اعدادي">تانيه اعدادي</option></select></div><div class="field"><label>عنوان الدرس</label><input id="prepTitle"></div></div><div class="g2" style="margin-top:15px"><div class="field"><label>آية مفتاح</label><textarea id="prepVerse"></textarea></div><div class="field"><label>هدف الدرس</label><textarea id="prepGoal"></textarea></div><div class="field"><label>تمهيد</label><textarea id="prepIntro"></textarea></div><div class="field"><label>النقاط الأساسية</label><textarea id="prepPoints"></textarea></div><div class="field"><label>النشاط والتطبيق</label><textarea id="prepActivity"></textarea></div><div class="field"><label>الواجب</label><textarea id="prepHomework"></textarea></div><div class="field" style="grid-column:1/-1"><label>ملاحظات</label><textarea id="prepNotes"></textarea></div></div></div><div class="panel"><div class="head"><h3>المعاينة</h3><div><button class="btn light" onclick="printPrep()">طباعة</button></div></div><div class="preview" id="prepPreview">لا يوجد تحضير محفوظ.</div></div></section>
+
+<!-- الواجب -->
+<section class="page" id="p-homework"><div class="panel"><div class="head"><h3>متابعة الواجب</h3><div><button class="btn gold" onclick="markHomeworkAll('done')">الكل تم</button> <button class="btn red" onclick="markHomeworkAll('notdone')">الكل لا يتم</button></div></div><div class="att-grid" style="display:grid;grid-template-columns:180px 180px 1fr auto;gap:9px;align-items:end"><div class="field"><label>التاريخ</label><input type="date" id="homeworkDate" onchange="homeworkView()"></div><div class="field"><label>الفصل</label><select id="homeworkClass" onchange="homeworkView()"><option value="الكل">كل الفصول</option><option value="تالته اعدادي">تالته اعدادي</option><option value="تانيه اعدادي">تانيه اعدادي</option></select></div><div class="field"><label>بحث بالاسم</label><input id="homeworkSearch" placeholder="اكتب اسم الخادم..." oninput="homeworkView()"></div><button class="btn light" onclick="homeworkView()">تحديث</button></div><div id="homeworkSummary" class="hint">📅 2026-10-10 • ✅ تم: <b>0</b> • ❌ لا يتم: <b>0</b> • ⏳ لم يسجل: <b>2</b></div><div id="homeworkList"><div class="status-card"><div class="status-name"><strong>بيشوي</strong><small>تانيه اعدادي</small></div><div><span class="badge b0">⏳ لم يسجل</span></div><div class="status-actions"><button class="status-btn done" onclick="setTask('homework','smv1czb58drry','done')">✅ تم</button><button class="status-btn notdone" onclick="setTask('homework','smv1czb58drry','notdone')">❌ لا يتم</button><button class="status-btn unset" onclick="clearTask('homework','smv1czb58drry')">↺ إزالة</button></div></div><div class="status-card"><div class="status-name"><strong>نادر</strong><small>تالته اعدادي</small></div><div><span class="badge b0">⏳ لم يسجل</span></div><div class="status-actions"><button class="status-btn done" onclick="setTask('homework','smv1d0yw77wg9','done')">✅ تم</button><button class="status-btn notdone" onclick="setTask('homework','smv1d0yw77wg9','notdone')">❌ لا يتم</button><button class="status-btn unset" onclick="clearTask('homework','smv1d0yw77wg9')">↺ إزالة</button></div></div></div></div></section>
+
+<!-- التأمل -->
+<section class="page" id="p-reflection"><div class="panel"><div class="head"><h3>متابعة التأمل</h3><div><button class="btn gold" onclick="markReflectionAll('done')">الكل تم</button> <button class="btn red" onclick="markReflectionAll('notdone')">الكل لا يتم</button></div></div><div class="att-grid" style="display:grid;grid-template-columns:180px 180px 1fr auto;gap:9px;align-items:end"><div class="field"><label>التاريخ</label><input type="date" id="reflectionDate" onchange="reflectionView()"></div><div class="field"><label>الفصل</label><select id="reflectionClass" onchange="reflectionView()"><option value="الكل">كل الفصول</option><option value="تالته اعدادي">تالته اعدادي</option><option value="تانيه اعدادي">تانيه اعدادي</option></select></div><div class="field"><label>بحث بالاسم</label><input id="reflectionSearch" placeholder="اكتب اسم الخادم..." oninput="reflectionView()"></div><button class="btn light" onclick="reflectionView()">تحديث</button></div><div id="reflectionSummary" class="hint">📅 2026-10-10 • ✅ تم: <b>0</b> • ❌ لا يتم: <b>0</b> • ⏳ لم يسجل: <b>2</b></div><div id="reflectionList"><div class="status-card"><div class="status-name"><strong>بيشوي</strong><small>تانيه اعدادي</small></div><div><span class="badge b0">⏳ لم يسجل</span></div><div class="status-actions"><button class="status-btn done" onclick="setTask('reflection','smv1czb58drry','done')">✅ تم</button><button class="status-btn notdone" onclick="setTask('reflection','smv1czb58drry','notdone')">❌ لا يتم</button><button class="status-btn unset" onclick="clearTask('reflection','smv1czb58drry')">↺ إزالة</button></div></div><div class="status-card"><div class="status-name"><strong>نادر</strong><small>تالته اعدادي</small></div><div><span class="badge b0">⏳ لم يسجل</span></div><div class="status-actions"><button class="status-btn done" onclick="setTask('reflection','smv1d0yw77wg9','done')">✅ تم</button><button class="status-btn notdone" onclick="setTask('reflection','smv1d0yw77wg9','notdone')">❌ لا يتم</button><button class="status-btn unset" onclick="clearTask('reflection','smv1d0yw77wg9')">↺ إزالة</button></div></div></div></div></section>
+
+<!-- النقاط -->
+<section class="page" id="p-points"><div class="panel"><div class="head"><h3>⭐ النقاط</h3></div>
+<div class="hint">اضغط على أي خادم لعرض نقاطه، وإضافة نقاط له أو خصمها.</div>
+<div class="filters"><input class="search" id="pointsSearch" placeholder="ابحث باسم الخادم..." oninput="pointsView()"><select id="pointsClass" onchange="pointsView()"><option value="الكل">كل الفصول</option><option value="تالته اعدادي">تالته اعدادي</option><option value="تانيه اعدادي">تانيه اعدادي</option></select><select id="pointsSort" onchange="pointsView()"><option value="points">الأعلى نقاطًا</option><option value="name">بالاسم</option></select><button class="btn light" onclick="pointsView()">تحديث</button></div>
+<div id="pointsSummary" class="hint">👥 عدد الخدام: <b>2</b> • ⭐ إجمالي النقاط: <b>140000000</b> • 🏆 الأعلى: <b>بيشوي</b> (140000000)</div><div id="pointsList"><div class="status-card prow" onclick="openPoints('smv1czb58drry')"><div class="status-name"><strong>🥇 بيشوي</strong><small>تانيه اعدادي</small></div><div><span class="badge pbig bp">⭐ 140000000</span></div><div class="status-actions"><button class="status-btn done" style="grid-column:1/-1" onclick="event.stopPropagation();openPoints('smv1czb58drry')">عرض / تعديل النقاط</button></div></div><div class="status-card prow" onclick="openPoints('smv1d0yw77wg9')"><div class="status-name"><strong>نادر</strong><small>تالته اعدادي</small></div><div><span class="badge pbig b0">⭐ 0</span></div><div class="status-actions"><button class="status-btn done" style="grid-column:1/-1" onclick="event.stopPropagation();openPoints('smv1d0yw77wg9')">عرض / تعديل النقاط</button></div></div></div></div></section>
+
+<!-- التقارير -->
+<section class="page" id="p-reports"><div class="panel"><div class="head"><h3>تقارير الحضور</h3><button class="btn gold" onclick="report()">إنشاء التقرير</button></div><div class="g4"><div class="field"><label>النوع</label><select id="reportType" onchange="report()"><option value="liturgy">حضور القداس</option><option value="school">حضور مدارس الأحد</option><option value="prepatt">حضور تحضير درس مدارس الأحد</option><option value="meeting">حضور اجتماع الخدمة</option></select></div><div class="field"><label>من</label><input type="date" id="from"></div><div class="field"><label>إلى</label><input type="date" id="to"></div><div class="field"><label>الفصل</label><select id="reportClass"><option value="الكل">كل الفصول</option><option value="تالته اعدادي">تالته اعدادي</option><option value="تانيه اعدادي">تانيه اعدادي</option></select></div></div></div><div class="panel"><div class="report"><div class="rbox"><small>السجلات</small><b id="rt">1</b></div><div class="rbox"><small>الحضور</small><b id="rp">1</b></div><div class="rbox"><small>الغياب</small><b id="ra">0</b></div><div class="rbox"><small>النسبة</small><b id="rr">100%</b></div></div><div id="reportOut" class="preview"><div class="table"><table><thead><tr><th>الاسم</th><th>الفصل</th><th>حضور</th><th>غياب</th><th>النسبة</th></tr></thead><tbody><tr><td>بيشوي</td><td>تانيه اعدادي</td><td>1</td><td>0</td><td>100%</td></tr></tbody></table></div></div></div></section>
+
+<!-- النسخ -->
+<section class="page" id="p-backup"><div class="g2"><div class="panel"><div class="head"><h3>نسخ البيانات</h3></div><p style="line-height:2;color:#746857;margin-bottom:13px">كل البيانات محفوظة على هذا الجهاز. استخدم النسخة الاحتياطية لنقل الخدمة إلى جهاز آخر.</p><button class="btn gold" onclick="exportData()">⬇ تنزيل نسخة</button><label class="btn light" style="display:inline-block;margin-right:6px">⬆ استيراد نسخة<input type="file" accept=".json" hidden="" onchange="importData(event)"></label></div><div class="panel"><div class="head"><h3>مشاركة النظام</h3></div><input class="search" value="" id="shareUrl" readonly=""><button class="btn blue" style="margin-top:10px" onclick="share()">مشاركة الرابط</button></div></div><div class="panel"><button class="btn light" onclick="demo()">إضافة بيانات تجريبية</button> <button class="btn red" onclick="resetData()">مسح كل البيانات</button></div></section>
+
+<!-- تصدير Excel -->
+<section class="page" id="p-export"><div class="panel"><div class="head"><h3>📤 تصدير Excel</h3></div>
+<p style="line-height:2;color:#746857;margin-bottom:14px">ملف Excel واحد فيه 4 صفحات: <b>الخدام</b> (كل البيانات + حالة اليوم المحدد + إجمالي الحضور والنقاط)، و<b>سجل الحضور</b> (مدارس الأحد والقداس والتحضير)، و<b>سجل النقاط</b>، و<b>الواجب والتأمل</b>.</p>
+<div class="g3"><div class="field"><label>تاريخ الحالة (حاضر / غائب)</label><input type="date" id="exDate"></div></div>
+<button class="btn gold" style="margin-top:14px" onclick="exportExcel()">📤 تصدير ملف Excel</button></div></section>
+
+<div class="footer"><div style="font-size:15px;font-weight:800;color:#96701f;margin-bottom:5px">البرمجة والتطوير بواسطة بيشوي نادر وجيه</div><div>أسرة معلم الأجيال 2026-2027 • نظام خدمة مدارس الأحد</div><div style="margin-top:4px">للتواصل: <a href="tel:01276613554" style="color:#8f6b20;text-decoration:none;font-weight:700">01276613554</a></div></div></main></div>
+
+<div id="toast" class="toast"></div>
+
+<!-- نافذة نقاط الخادم -->
+<div id="pointsModal" style="position:fixed;inset:0;background:#0008;display:none;place-items:center;z-index:3000;padding:18px;overflow:auto" onclick="if(event.target===this)closePoints()">
+<div style="width:min(560px,100%);max-height:92vh;overflow:auto;background:#fffdf8;border:1px solid #dfcc99;border-radius:28px;padding:26px;box-shadow:0 30px 80px #0003;position:relative">
+<button onclick="closePoints()" style="position:absolute;left:15px;top:15px;border:0;background:#f4ead2;color:#87651c;width:38px;height:38px;border-radius:12px;font-size:20px">×</button>
+<div style="text-align:center;margin-bottom:14px"><div style="font-size:38px">⭐</div><h2 id="ptName" style="color:#956f1f;font-size:24px;margin-top:4px"></h2><small id="ptClass" style="color:#8b7f6e"></small><div id="ptTotal" style="font-size:46px;font-weight:800;color:#916d20;margin-top:6px">0</div><small style="color:#8b7f6e">إجمالي النقاط</small></div>
+<div class="g2"><div class="field"><label>عدد النقاط</label><input type="number" id="ptAmount" min="1" step="1" value="1" inputmode="numeric"></div><div class="field"><label>التاريخ</label><input type="date" id="ptDate"></div></div>
+<div class="chips"><button class="chipbtn" onclick="$('ptAmount').value=1">1</button><button class="chipbtn" onclick="$('ptAmount').value=5">5</button><button class="chipbtn" onclick="$('ptAmount').value=10">10</button><button class="chipbtn" onclick="$('ptAmount').value=20">20</button></div>
+<div class="field"><label>السبب (اختياري)</label><input id="ptReason" placeholder="مثال: حفظ آية، التزام، تأخير..."></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 18px"><button class="btn green" style="padding:13px" onclick="addPoints(1)">➕ إضافة نقاط</button><button class="btn red" style="padding:13px" onclick="addPoints(-1)">➖ خصم نقاط</button></div>
+<h3 style="color:#916c20;font-size:17px;margin-bottom:6px">سجل النقاط</h3><div id="ptHistory"></div>
+</div></div>
+
+<!-- نافذة عن المطور -->
+<div id="aboutModal" style="position:fixed;inset:0;background:#0008;display:none;place-items:center;z-index:3000;padding:18px">
+<div style="width:min(480px,100%);background:#fffdf8;border:1px solid #dfcc99;border-radius:28px;padding:28px;text-align:center;box-shadow:0 30px 80px #0003;position:relative">
+<button onclick="hideAbout()" style="position:absolute;left:15px;top:15px;border:0;background:#f4ead2;color:#87651c;width:38px;height:38px;border-radius:12px;font-size:20px">×</button>
+<div style="font-size:50px;color:#bb8e32;margin-bottom:8px">✝</div>
+<div style="color:#a17a2d;letter-spacing:1px;font-weight:bold">أسرة معلم الأجيال 2026-2027</div>
+<h2 style="color:#956f1f;font-size:26px;margin:8px 0 12px">معلومات عن الويب</h2>
+<p style="color:#776b5a;line-height:1.9;margin-bottom:16px">نظام أسرة معلم الأجيال 2026-2027 لتنظيم الخدام والحضور والغياب والنقاط والتحضير والواجب والتأمل والتقارير.</p>
+<div style="background:#fbf3df;border:1px solid #e4d3ab;border-radius:18px;padding:16px;line-height:2">
+<strong style="color:#8f691f">Create by Bishoy Nader</strong><br>
+<span style="color:#776b5a">للتواصل والدعم</span><br>
+<a href="tel:01276613554" style="display:inline-block;margin-top:5px;color:#34784e;text-decoration:none;font-size:20px;font-weight:bold">01276613554</a>
+</div></div></div>
+
+<script>
+const KEY='oneServeFinal';
+let D={students:[],attendance:{},liturgy:{},prepAtt:{},meetingAtt:{},preps:{},homework:{},reflections:{},points:[]};
+let eid=null,curAtt='liturgy',curPt=null;
+const $=id=>document.getElementById(id);
+const ATT={
+  liturgy:{bag:'liturgy',label:'حضور القداس'},
+  school:{bag:'attendance',label:'حضور مدارس الأحد'},
+  prepatt:{bag:'prepAtt',label:'حضور تحضير درس مدارس الأحد'},
+  meeting:{bag:'meetingAtt',label:'حضور اجتماع الخدمة'}
+};
+const BAGS=['attendance','liturgy','prepAtt','meetingAtt','homework','reflections'];
+
+function today(){let d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function uid(){return 's'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function attKey(d,id){return d+'__'+id}
+function prepKey(d,c){return d+'__'+encodeURIComponent(c)}
+function hwKey(d,id){return d+'__'+id}
+function save(){localStorage.setItem(KEY,JSON.stringify(D))}
+function norm(){
+  if(!D||typeof D!=='object')D={};
+  if(!Array.isArray(D.students))D.students=[];
+  ['attendance','liturgy','prepAtt','meetingAtt','preps','homework','reflections'].forEach(k=>{if(!D[k]||typeof D[k]!=='object'||Array.isArray(D[k]))D[k]={}});
+  if(!Array.isArray(D.points))D.points=[];
+}
+function load(){try{let x=JSON.parse(localStorage.getItem(KEY));if(x)D=x}catch(e){}norm()}
+function enter(){$('welcome').classList.add('hide');$('app').style.display='block';localStorage.setItem('entered','1')}
+function ageOf(b){
+  if(!b)return '';let d=new Date(b);if(isNaN(d))return '';let n=new Date(),a=n.getFullYear()-d.getFullYear();
+  if(n<new Date(n.getFullYear(),d.getMonth(),d.getDate()))a--;return a>=0?a:'';
+}
+function ptsOf(id){return D.points.filter(p=>p.studentId===id).reduce((s,p)=>s+p.amount,0)}
+
+function init(){
+  load();let t=today();
+  ['homeDate','attDate','prepDate','homeworkDate','reflectionDate','to','exDate'].forEach(id=>$(id).value=t);
+  let d=new Date();d.setDate(d.getDate()-30);
+  $('from').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  $('servant').value=localStorage.getItem('servant')||'';saveServant();
+  refreshFilters();refreshAll();$('shareUrl').value=location.href;
+  if(localStorage.getItem('entered')==='1')enter();
+}
+function go(p,b){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  $('p-'+p).classList.add('active');
+  document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));
+  if(b)b.classList.add('active');
+  $('title').textContent={home:'الرئيسية',students:'الخدام والفصول',attendance:'الحضور والغياب',prep:'التحضير',homework:'الواجب',reflection:'التأمل',points:'النقاط',reports:'التقارير',backup:'النسخ والمشاركة',export:'تصدير Excel'}[p];
+  if(p==='points')pointsView();
+  toggle(false);
+}
+function toggle(v){let s=$('side');if(v===undefined)v=!s.classList.contains('open');s.classList.toggle('open',v)}
+function saveServant(){let n=$('servant').value.trim();localStorage.setItem('servant',n);$('hello').textContent=n?'أهلاً بيك يا '+n+' ✝':'أهلاً بيك يا خادم ✝'}
+
+function refreshFilters(){
+  let cs=[...new Set(D.students.map(s=>s.className||'عام'))].sort((a,b)=>a.localeCompare(b,'ar'));
+  [['homeClass','الكل'],['studentFilter','الكل'],['attClass','الكل'],['reportClass','الكل'],['homeworkClass','الكل'],['reflectionClass','الكل'],['pointsClass','الكل'],['prepClass','عام']].forEach(([id,f])=>{
+    let e=$(id),old=e.value;
+    e.innerHTML='<option value="'+f+'">'+(f==='عام'?'عام':'كل الفصول')+'</option>';
+    cs.forEach(c=>{if(id==='prepClass'&&c==='عام')return;let o=document.createElement('option');o.value=c;o.textContent=c;e.appendChild(o)});
+    if([...e.options].some(o=>o.value===old))e.value=old;
+  });
+}
+function refreshAll(){home();studentsView();attendanceView();loadPrep();homeworkView();reflectionView();pointsView();report()}
+
+/* ===== الخدام ===== */
+function formVals(){return{
+  name:$('newName').value.trim(),className:$('newClass').value.trim()||'عام',phone:$('newPhone').value.trim(),
+  birth:$('newBirth').value,confessor:$('newConfessor').value.trim(),marital:$('newMarital').value,
+  job:$('newJob').value.trim(),address:$('newAddress').value.trim()
+}}
+function clearForm(){
+  ['newName','newClass','newPhone','newBirth','newConfessor','newJob','newAddress'].forEach(id=>$(id).value='');
+  $('newMarital').value='';eid=null;
+  $('addBtn').textContent='إضافة';$('formTitle').textContent='إضافة خادم';$('cancelEdit').classList.add('hide');
+}
+function syncSnap(s){
+  BAGS.forEach(k=>Object.values(D[k]).forEach(r=>{if(r.studentId===s.id){r.studentName=s.name;r.className=s.className||'عام'}}));
+}
+function addStudent(){
+  let v=formVals();if(!v.name)return toast('اكتب اسم الخادم');
+  if(eid){
+    let s=D.students.find(x=>x.id===eid);
+    if(s){Object.assign(s,v);syncSnap(s)}
+    toast('تم حفظ التعديل ✅');
+  }else{
+    D.students.push({id:uid(),...v,createdAt:Date.now()});
+    toast('تمت الإضافة ✅');
+  }
+  save();clearForm();refreshFilters();refreshAll();
+}
+function studentsView(){
+  let q=$('studentSearch').value.trim().toLowerCase(),f=$('studentFilter').value,sort=$('studentSort').value;
+  let a=D.students.filter(s=>(!q||s.name.toLowerCase().includes(q))&&(f==='الكل'||(s.className||'عام')===f));
+  a.sort((x,y)=>sort==='new'?(y.createdAt||0)-(x.createdAt||0):sort==='class'?(x.className||'').localeCompare(y.className||'','ar'):x.name.localeCompare(y.name,'ar'));
+  $('studentsTable').innerHTML=a.length?a.map(s=>{
+    let age=ageOf(s.birth),p=ptsOf(s.id);
+    return '<tr><td><b>'+esc(s.name)+'</b></td><td>'+esc(s.className||'عام')+'</td><td>'+esc(s.phone||'-')+'</td><td>'+(s.birth?esc(s.birth)+(age!==''?' <small style="color:#8b7f6e">('+age+' سنة)</small>':''):'-')+'</td><td>'+esc(s.confessor||'-')+'</td><td>'+esc(s.marital||'-')+'</td><td>'+esc(s.job||'-')+'</td><td>'+esc(s.address||'-')+'</td><td><span class="badge '+(p>0?'bp':p<0?'ba':'b0')+'" style="cursor:pointer" onclick="openPoints(\''+s.id+'\')">⭐ '+p+'</span></td><td style="white-space:nowrap"><button class="small light" onclick="editStudent(\''+s.id+'\')">تعديل</button> <button class="small red" onclick="delStudent(\''+s.id+'\')">حذف</button></td></tr>';
+  }).join(''):'<tr><td colspan="10"><div class="empty">لا توجد أسماء.</div></td></tr>';
+}
+function clearFilter(){$('studentSearch').value='';$('studentFilter').value='الكل';studentsView()}
+function editStudent(id){
+  let s=D.students.find(x=>x.id===id);if(!s)return;eid=id;
+  $('newName').value=s.name||'';$('newClass').value=s.className||'';$('newPhone').value=s.phone||'';
+  $('newBirth').value=s.birth||'';$('newConfessor').value=s.confessor||'';$('newMarital').value=s.marital||'';
+  $('newJob').value=s.job||'';$('newAddress').value=s.address||'';
+  $('addBtn').textContent='حفظ التعديل';$('formTitle').textContent='تعديل بيانات: '+s.name;$('cancelEdit').classList.remove('hide');
+  go('students',document.querySelectorAll('.nav button')[1]);
+  window.scrollTo({top:0,behavior:'smooth'});toast('عدّل البيانات ثم اضغط «حفظ التعديل»');
+}
+function delStudent(id){
+  let s=D.students.find(x=>x.id===id);if(!s||!confirm('حذف '+s.name+'؟ سيتم حذف حضوره ونقاطه أيضًا.'))return;
+  D.students=D.students.filter(x=>x.id!==id);
+  BAGS.forEach(k=>Object.keys(D[k]).forEach(key=>{if(D[k][key].studentId===id)delete D[k][key]}));
+  D.points=D.points.filter(p=>p.studentId!==id);
+  if(eid===id)clearForm();
+  save();refreshFilters();refreshAll();toast('تم الحذف');
+}
+
+/* ===== الحضور (مدارس الأحد / القداس / تحضير الدرس) ===== */
+function bag(){return D[ATT[curAtt].bag]}
+function setAttType(t){
+  curAtt=t;
+  document.querySelectorAll('#attTabs .tab').forEach(b=>b.classList.toggle('active',b.dataset.t===t));
+  attendanceView();
+}
+function attFiltered(){
+  let f=$('attClass').value,q=$('attSearch').value.trim().toLowerCase();
+  return D.students.filter(s=>(f==='الكل'||(s.className||'عام')===f)&&(!q||s.name.toLowerCase().includes(q)));
+}
+function attendanceView(){
+  let date=$('attDate').value||today(),a=attFiltered(),B=bag();
+  let r=a.map(s=>B[attKey(date,s.id)]).filter(Boolean),p=r.filter(x=>x.status==='present').length,ab=r.filter(x=>x.status==='absent').length;
+  $('attSummary').innerHTML='<b>'+ATT[curAtt].label+'</b> • 📅 '+date+' • ✅ حاضر: <b>'+p+'</b> • ❌ غائب: <b>'+ab+'</b> • ⏳ لم يسجل: <b>'+(a.length-p-ab)+'</b>';
+  $('attList').innerHTML=a.length?a.map(s=>{
+    let x=B[attKey(date,s.id)],b=x?.status==='present'?'<span class="badge bp">✅ حاضر</span>':x?.status==='absent'?'<span class="badge ba">❌ غائب</span>':'<span class="badge b0">لم يسجل</span>';
+    return '<div class="attrow"><div class="attname"><strong>'+esc(s.name)+'</strong><small>'+esc(s.className||'عام')+'</small></div><div>'+b+'</div><div class="attbtns"><button class="small green" onclick="setAtt(\''+s.id+'\',\'present\')">✅ حاضر</button><button class="small red" onclick="setAtt(\''+s.id+'\',\'absent\')">❌ غائب</button><button class="small light" onclick="clearAtt(\''+s.id+'\')">↺ إزالة</button></div></div>';
+  }).join(''):'<div class="empty">لا توجد أسماء.</div>';
+}
+function attendancePointRef(type,date,id){return type+'__'+attKey(date,id)}
+function syncAttendancePoints(type,date,id,status){
+  const ref=attendancePointRef(type,date,id);
+  D.points=D.points.filter(p=>p.attendanceRef!==ref);
+  if(status==='present'){
+    const s=D.students.find(x=>x.id===id);
+    if(s)D.points.push({id:uid(),studentId:id,amount:10,reason:'حضور تلقائي - '+ATT[type].label,date,ts:Date.now(),attendanceRef:ref});
+  }
+}
+function setAtt(id,status){
+  let d=$('attDate').value||today(),s=D.students.find(x=>x.id===id);if(!s)return;
+  const key=attKey(d,id),old=bag()[key];
+  if(old?.status===status){if(status==='present'&&!D.points.some(p=>p.attendanceRef===attendancePointRef(curAtt,d,id))){syncAttendancePoints(curAtt,d,id,status);save();pointsView();studentsView()}return toast(status==='present'?'الحضور مسجل بالفعل، والنقاط محسوبة مرة واحدة ⭐':'الغياب مسجل بالفعل')}
+  bag()[key]={studentId:id,studentName:s.name,className:s.className||'عام',date:d,status};
+  syncAttendancePoints(curAtt,d,id,status);
+  save();attendanceView();home();pointsView();studentsView();
+  toast(status==='present'?'تم تسجيل الحضور وإضافة 10 نقاط ⭐':'تم تسجيل الغياب');
+}
+function clearAtt(id){
+  const d=$('attDate').value||today();delete bag()[attKey(d,id)];
+  D.points=D.points.filter(p=>p.attendanceRef!==attendancePointRef(curAtt,d,id));
+  save();attendanceView();home();pointsView();studentsView();toast('تم إلغاء التسجيل والنقاط المرتبطة به');
+}
+function markAll(status){
+  let d=$('attDate').value||today(),B=bag();
+  attFiltered().forEach(s=>{
+    const key=attKey(d,s.id),old=B[key];
+    if(old?.status===status){if(status==='present'&&!D.points.some(p=>p.attendanceRef===attendancePointRef(curAtt,d,s.id)))syncAttendancePoints(curAtt,d,s.id,status);return;}
+    B[key]={studentId:s.id,studentName:s.name,className:s.className||'عام',date:d,status};
+    syncAttendancePoints(curAtt,d,s.id,status);
+  });
+  save();attendanceView();home();pointsView();studentsView();toast(status==='present'?'تم تحديد الكل حاضر وإضافة 10 نقاط لكل حاضر جديد ⭐':'تم تحديد الكل غائب وإلغاء نقاط الحضور المرتبطة');
+}
+
+/* ===== الرئيسية ===== */
+function home(){
+  let d=$('homeDate').value||today(),f=$('homeClass').value||'الكل',st=$('homeStatus').value||'all';
+  let r=Object.values(D.attendance).filter(x=>x.date===d&&(f==='الكل'||x.className===f)),
+      p=r.filter(x=>x.status==='present').length,a=r.filter(x=>x.status==='absent').length;
+  if(st==='present')a=0;if(st==='absent')p=0;
+  $('ss').textContent=D.students.length;
+  $('sc').textContent=new Set(D.students.map(s=>s.className||'عام')).size;
+  $('sp').textContent=p;$('sa').textContent=a;
+  let pr=D.preps[prepKey(d,$('prepClass').value||'عام')];
+  $('sx').textContent=pr?'نعم':'لا';
+  $('homePrep').innerHTML=pr?'<b>'+esc(pr.title||'درس بدون عنوان')+'</b><br>'+esc(pr.verse||''):'لا يوجد تحضير محفوظ اليوم.';
+  let a2=D.students.slice().sort((x,y)=>(y.createdAt||0)-(x.createdAt||0)).slice(0,8);
+  $('homeKids').innerHTML=a2.length?a2.map(s=>'<div style="display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #eee7d7"><div><b>'+esc(s.name)+'</b><small style="display:block;color:#8b7d69">'+esc(s.className||'عام')+'</small></div></div>').join(''):'<div class="empty">لا يوجد خدام.</div>';
+}
+
+/* ===== التحضير ===== */
+function prepForm(){return{date:$('prepDate').value||today(),className:$('prepClass').value||'عام',title:$('prepTitle').value.trim(),verse:$('prepVerse').value.trim(),goal:$('prepGoal').value.trim(),intro:$('prepIntro').value.trim(),points:$('prepPoints').value.trim(),activity:$('prepActivity').value.trim(),homework:$('prepHomework').value.trim(),notes:$('prepNotes').value.trim()}}
+function savePrep(){let p=prepForm();D.preps[prepKey(p.date,p.className)]=p;save();renderPrep(p);home();toast('تم حفظ التحضير ✅')}
+function loadPrep(){
+  let d=$('prepDate').value||today(),c=$('prepClass').value||'عام',p=D.preps[prepKey(d,c)];
+  if(!p){clearPrep();$('prepPreview').innerHTML='لا يوجد تحضير محفوظ.';return}
+  ['title','verse','goal','intro','points','activity','homework','notes'].forEach(k=>$('prep'+k[0].toUpperCase()+k.slice(1)).value=p[k]||'');
+  renderPrep(p);
+}
+function clearPrep(){['prepTitle','prepVerse','prepGoal','prepIntro','prepPoints','prepActivity','prepHomework','prepNotes'].forEach(id=>$(id).value='')}
+function renderPrep(p){
+  $('prepPreview').innerHTML='<h4>'+esc(p.title||'درس بدون عنوان')+'</h4><div class="block"><b>📖 الآية:</b><br>'+esc(p.verse||'—')+'</div><div class="block"><b>🎯 الهدف:</b><br>'+esc(p.goal||'—')+'</div><div class="block"><b>💡 التمهيد:</b><br>'+esc(p.intro||'—')+'</div><div class="block"><b>📝 الشرح:</b><br>'+esc(p.points||'—')+'</div><div class="block"><b>🎲 النشاط:</b><br>'+esc(p.activity||'—')+'</div><div class="block"><b>📌 الواجب:</b><br>'+esc(p.homework||'—')+'</div><div class="block"><b>📒 الملاحظات:</b><br>'+esc(p.notes||'—')+'</div>';
+}
+async function sharePrep(){
+  let p=prepForm(),t=(p.title||'تحضير مدارس الأحد')+'\n\nالآية: '+p.verse+'\n\nالهدف: '+p.goal+'\n\nالشرح: '+p.points+'\n\nالنشاط: '+p.activity+'\n\nالواجب: '+p.homework;
+  if(navigator.share){try{await navigator.share({title:p.title||'تحضير مدارس الأحد',text:t})}catch(e){}}
+  else{await navigator.clipboard.writeText(t);toast('تم نسخ التحضير ✅')}
+}
+function printPrep(){
+  let p=prepForm(),w=window.open('','_blank');if(!w)return;
+  w.document.write('<html dir="rtl"><body style="font-family:Tahoma;padding:30px;line-height:2"><h1>'+esc(p.title||'تحضير درس')+'</h1><p><b>الآية:</b><br>'+esc(p.verse)+'</p><p><b>الهدف:</b><br>'+esc(p.goal)+'</p><p><b>التمهيد:</b><br>'+esc(p.intro)+'</p><p><b>الشرح:</b><br>'+esc(p.points)+'</p><p><b>النشاط:</b><br>'+esc(p.activity)+'</p><p><b>الواجب:</b><br>'+esc(p.homework)+'</p><p><b>الملاحظات:</b><br>'+esc(p.notes)+'</p></body></html>');
+  w.document.close();w.print();
+}
+
+/* ===== الواجب والتأمل ===== */
+function tk(kind){return kind==='homework'?{date:'homeworkDate',cls:'homeworkClass',q:'homeworkSearch',bag:'homework',sum:'homeworkSummary',list:'homeworkList'}:{date:'reflectionDate',cls:'reflectionClass',q:'reflectionSearch',bag:'reflections',sum:'reflectionSummary',list:'reflectionList'}}
+function taskRefresh(kind){kind==='homework'?homeworkView():reflectionView()}
+function setTask(kind,id,status){
+  let t=tk(kind),d=$(t.date).value||today(),s=D.students.find(x=>x.id===id);if(!s)return;
+  D[t.bag][hwKey(d,id)]={studentId:id,studentName:s.name,className:s.className||'عام',date:d,status};
+  save();taskRefresh(kind);home();
+}
+function taskBadge(r){return r?.status==='done'?'<span class="badge bp">✅ تم</span>':r?.status==='notdone'?'<span class="badge ba">❌ لا يتم</span>':'<span class="badge b0">⏳ لم يسجل</span>'}
+function taskFiltered(kind){
+  let t=tk(kind),cls=$(t.cls).value,q=$(t.q).value.trim().toLowerCase();
+  return D.students.filter(s=>(cls==='الكل'||(s.className||'عام')===cls)&&(!q||s.name.toLowerCase().includes(q))).sort((a,b)=>a.name.localeCompare(b.name,'ar'));
+}
+function renderTask(kind){
+  let t=tk(kind),date=$(t.date).value||today(),arr=taskFiltered(kind);
+  let rec=arr.map(s=>D[t.bag][hwKey(date,s.id)]).filter(Boolean),done=rec.filter(x=>x.status==='done').length,no=rec.filter(x=>x.status==='notdone').length;
+  $(t.sum).innerHTML='📅 '+date+' • ✅ تم: <b>'+done+'</b> • ❌ لا يتم: <b>'+no+'</b> • ⏳ لم يسجل: <b>'+(arr.length-done-no)+'</b>';
+  $(t.list).innerHTML=arr.length?arr.map(s=>{
+    let r=D[t.bag][hwKey(date,s.id)];
+    return '<div class="status-card"><div class="status-name"><strong>'+esc(s.name)+'</strong><small>'+esc(s.className||'عام')+'</small></div><div>'+taskBadge(r)+'</div><div class="status-actions"><button class="status-btn done" onclick="setTask(\''+kind+'\',\''+s.id+'\',\'done\')">✅ تم</button><button class="status-btn notdone" onclick="setTask(\''+kind+'\',\''+s.id+'\',\'notdone\')">❌ لا يتم</button><button class="status-btn unset" onclick="clearTask(\''+kind+'\',\''+s.id+'\')">↺ إزالة</button></div></div>';
+  }).join(''):'<div class="empty">لا توجد أسماء.</div>';
+}
+function homeworkView(){renderTask('homework')}
+function reflectionView(){renderTask('reflection')}
+function clearTask(kind,id){let t=tk(kind),d=$(t.date).value||today();delete D[t.bag][hwKey(d,id)];save();taskRefresh(kind);home()}
+function markTaskAll(kind,status){
+  let t=tk(kind),d=$(t.date).value||today();
+  taskFiltered(kind).forEach(s=>D[t.bag][hwKey(d,s.id)]={studentId:s.id,studentName:s.name,className:s.className||'عام',date:d,status});
+  save();taskRefresh(kind);home();toast(status==='done'?'تم تحديد الكل «تم» ✅':'تم تحديد الكل «لا يتم» ❌');
+}
+function markHomeworkAll(s){markTaskAll('homework',s)}
+function markReflectionAll(s){markTaskAll('reflection',s)}
+
+/* ===== النقاط ===== */
+function pointsView(){
+  let q=$('pointsSearch').value.trim().toLowerCase(),cls=$('pointsClass').value,sort=$('pointsSort').value;
+  let arr=D.students.filter(s=>(cls==='الكل'||(s.className||'عام')===cls)&&(!q||s.name.toLowerCase().includes(q))).map(s=>({s,p:ptsOf(s.id)}));
+  arr.sort((a,b)=>sort==='name'?a.s.name.localeCompare(b.s.name,'ar'):(b.p-a.p)||a.s.name.localeCompare(b.s.name,'ar'));
+  let total=arr.reduce((t,x)=>t+x.p,0);
+  $('pointsSummary').innerHTML='👥 عدد الخدام: <b>'+arr.length+'</b> • ⭐ إجمالي النقاط: <b>'+total+'</b>'+(arr.length&&sort==='points'&&arr[0].p>0?' • 🏆 الأعلى: <b>'+esc(arr[0].s.name)+'</b> ('+arr[0].p+')':'');
+  const medals=['🥇','🥈','🥉'];
+  $('pointsList').innerHTML=arr.length?arr.map((x,i)=>{
+    let m=(sort==='points'&&x.p>0&&i<3)?medals[i]+' ':'';
+    return '<div class="status-card prow" onclick="openPoints(\''+x.s.id+'\')"><div class="status-name"><strong>'+m+esc(x.s.name)+'</strong><small>'+esc(x.s.className||'عام')+'</small></div><div><span class="badge pbig '+(x.p>0?'bp':x.p<0?'ba':'b0')+'">⭐ '+x.p+'</span></div><div class="status-actions"><button class="status-btn done" style="grid-column:1/-1" onclick="event.stopPropagation();openPoints(\''+x.s.id+'\')">عرض / تعديل النقاط</button></div></div>';
+  }).join(''):'<div class="empty">لا توجد أسماء. أضف خدام من صفحة «الخدام والفصول».</div>';
+}
+function openPoints(id){
+  if(!D.students.some(s=>s.id===id))return;
+  curPt=id;$('ptDate').value=today();$('ptAmount').value=1;$('ptReason').value='';
+  renderPtModal();$('pointsModal').style.display='grid';
+}
+function closePoints(){$('pointsModal').style.display='none';curPt=null}
+function renderPtModal(){
+  let s=D.students.find(x=>x.id===curPt);if(!s)return closePoints();
+  $('ptName').textContent=s.name;$('ptClass').textContent=s.className||'عام';
+  let t=ptsOf(s.id);$('ptTotal').textContent=t;$('ptTotal').style.color=t<0?'#a54039':'#916d20';
+  let h=D.points.filter(p=>p.studentId===s.id).sort((a,b)=>(b.date||'').localeCompare(a.date||'')||(b.ts||0)-(a.ts||0));
+  $('ptHistory').innerHTML=h.length?h.map(p=>'<div class="hist"><div><span class="'+(p.amount>0?'pos':'neg')+'">'+(p.amount>0?'+':'')+p.amount+'</span> <b style="margin-right:6px">'+(p.amount>0?'إضافة':'خصم')+'</b><small>'+esc(p.date||'')+(p.reason?' • '+esc(p.reason):'')+'</small></div><button class="small red" onclick="delPoint(\''+p.id+'\')">حذف</button></div>').join(''):'<div class="empty">لا توجد نقاط مسجلة بعد.</div>';
+}
+function addPoints(sign){
+  let n=parseInt($('ptAmount').value,10);
+  if(!curPt)return;
+  if(!n||n<=0)return toast('اكتب عدد النقاط');
+  D.points.push({id:uid(),studentId:curPt,amount:sign*n,reason:$('ptReason').value.trim(),date:$('ptDate').value||today(),ts:Date.now()});
+  save();$('ptReason').value='';renderPtModal();pointsView();studentsView();
+  toast(sign>0?'تمت إضافة '+n+' نقطة ✅':'تم خصم '+n+' نقطة ➖');
+}
+function delPoint(pid){
+  if(!confirm('حذف هذا السجل؟'))return;
+  D.points=D.points.filter(p=>p.id!==pid);save();renderPtModal();pointsView();studentsView();toast('تم الحذف');
+}
+
+/* ===== التقارير ===== */
+function report(){
+  let f=$('from').value,t=$('to').value,c=$('reportClass').value,ty=$('reportType').value||'school';
+  if(!f||!t)return;
+  let src=D[ATT[ty].bag];
+  let r=Object.values(src).filter(x=>x.date>=f&&x.date<=t&&(c==='الكل'||x.className===c)),
+      p=r.filter(x=>x.status==='present').length,a=r.filter(x=>x.status==='absent').length,n=p+a;
+  $('rt').textContent=n;$('rp').textContent=p;$('ra').textContent=a;$('rr').textContent=(n?Math.round(p/n*100):0)+'%';
+  if(!r.length){$('reportOut').innerHTML='لا توجد بيانات.';return}
+  let m={};
+  r.forEach(x=>{m[x.studentId]??={name:x.studentName,className:x.className,p:0,a:0};x.status==='present'?m[x.studentId].p++:m[x.studentId].a++});
+  $('reportOut').innerHTML='<div class="table"><table><thead><tr><th>الاسم</th><th>الفصل</th><th>حضور</th><th>غياب</th><th>النسبة</th></tr></thead><tbody>'+Object.values(m).sort((x,y)=>x.name.localeCompare(y.name,'ar')).map(x=>'<tr><td>'+esc(x.name)+'</td><td>'+esc(x.className)+'</td><td>'+x.p+'</td><td>'+x.a+'</td><td>'+Math.round(x.p/(x.p+x.a)*100)+'%</td></tr>').join('')+'</tbody></table></div>';
+}
+
+/* ===== تصدير Excel ===== */
+function exportExcel(){
+  if(!D.students.length)return toast('لا يوجد خدام للتصدير');
+  let date=$('exDate').value||today();
+  const nm=(id,snap)=>{let s=D.students.find(x=>x.id===id);return s?s.name:(snap||'')};
+  const cl=(id,snap)=>{let s=D.students.find(x=>x.id===id);return s?(s.className||'عام'):(snap||'')};
+  const st=(b,id)=>{let r=b[attKey(date,id)];return r?(r.status==='present'?'حاضر':'غائب'):'لم يسجل'};
+  const cnt=(b,id,ok)=>{let p=0,a=0;Object.values(b).forEach(x=>{if(x.studentId===id){x.status===ok?p++:a++}});return[p,a,(p+a)?Math.round(p/(p+a)*100)+'%':'-']};
+
+  let head1=['م','الاسم','الفصل','الهاتف','تاريخ الميلاد','السن','أب الاعتراف','الحالة الاجتماعية','العمل','العنوان',
+    'القداس ('+date+')','مدارس الأحد ('+date+')','تحضير درس مدارس الأحد ('+date+')','اجتماع الخدمة ('+date+')',
+    'حضور القداس','غياب القداس','نسبة القداس',
+    'حضور مدارس الأحد','غياب مدارس الأحد','نسبة مدارس الأحد',
+    'حضور التحضير','غياب التحضير','نسبة التحضير','حضور اجتماع الخدمة','غياب اجتماع الخدمة','نسبة اجتماع الخدمة',
+    'واجب تم','واجب لا يتم','تأمل تم','تأمل لا يتم','إجمالي النقاط'];
+  let sorted=D.students.slice().sort((a,b)=>(a.className||'').localeCompare(b.className||'','ar')||a.name.localeCompare(b.name,'ar'));
+  let rows1=sorted.map((s,i)=>{
+    let a=cnt(D.attendance,s.id,'present'),l=cnt(D.liturgy,s.id,'present'),pr=cnt(D.prepAtt,s.id,'present'),mt=cnt(D.meetingAtt,s.id,'present'),h=cnt(D.homework,s.id,'done'),r=cnt(D.reflections,s.id,'done');
+    return[i+1,s.name,s.className||'عام',s.phone||'',s.birth||'',s.birth?ageOf(s.birth):'',s.confessor||'',s.marital||'',s.job||'',s.address||'',
+      st(D.liturgy,s.id),st(D.attendance,s.id),st(D.prepAtt,s.id),st(D.meetingAtt,s.id),l[0],l[1],l[2],a[0],a[1],a[2],pr[0],pr[1],pr[2],mt[0],mt[1],mt[2],h[0],h[1],r[0],r[1],ptsOf(s.id)];
+  });
+
+  let log=[];
+  Object.keys(ATT).forEach(k=>Object.values(D[ATT[k].bag]).forEach(x=>log.push([x.date,ATT[k].label,nm(x.studentId,x.studentName),cl(x.studentId,x.className),x.status==='present'?'حاضر':'غائب'])));
+  log.sort((a,b)=>b[0].localeCompare(a[0])||a[2].localeCompare(b[2],'ar'));
+
+  let plog=D.points.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')||(b.ts||0)-(a.ts||0)).map(p=>[p.date||'',nm(p.studentId),cl(p.studentId),p.amount,p.amount>0?'إضافة':'خصم',p.reason||'']);
+
+  let tlog=[];
+  [['homework','الواجب'],['reflections','التأمل']].forEach(([k,l])=>Object.values(D[k]).forEach(x=>tlog.push([x.date,l,nm(x.studentId,x.studentName),cl(x.studentId,x.className),x.status==='done'?'تم':'لا يتم'])));
+  tlog.sort((a,b)=>b[0].localeCompare(a[0])||a[2].localeCompare(b[2],'ar'));
+
+  let sheets=[
+    ['الخدام',[head1,...rows1]],
+    ['سجل الحضور',[['التاريخ','النوع','الاسم','الفصل','الحالة'],...log]],
+    ['سجل النقاط',[['التاريخ','الاسم','الفصل','النقاط','النوع','السبب'],...plog]],
+    ['الواجب والتأمل',[['التاريخ','النوع','الاسم','الفصل','الحالة'],...tlog]]
+  ];
+
+  if(window.XLSX){
+    let wb=XLSX.utils.book_new();
+    sheets.forEach(([n,r])=>{
+      let ws=XLSX.utils.aoa_to_sheet(r);
+      ws['!cols']=r[0].map((_,i)=>({wch:(n==='الخدام'&&(i===1||i===9))?26:18}));
+      XLSX.utils.book_append_sheet(wb,ws,n);
+    });
+    wb.Workbook={Views:[{RTL:true}]};
+    XLSX.writeFile(wb,'khodam-'+date+'.xlsx');
+    toast('تم تصدير ملف Excel ✅');
+  }else{
+    /* لو مكتبة Excel مش متحملة (مفيش إنترنت) نصدّر ملف .xls بسيط */
+    let h='<html dir="rtl"><head><meta charset="UTF-8"></head><body>';
+    sheets.forEach(([n,r])=>{
+      h+='<h3>'+esc(n)+'</h3><table border="1">'+r.map((row,i)=>'<tr>'+row.map(c=>(i?'<td>':'<th>')+esc(c)+(i?'</td>':'</th>')).join('')+'</tr>').join('')+'</table><br>';
+    });
+    h+='</body></html>';
+    let b=new Blob(['\ufeff'+h],{type:'application/vnd.ms-excel;charset=utf-8'}),a=document.createElement('a');
+    a.href=URL.createObjectURL(b);a.download='khodam-'+date+'.xls';a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),500);
+    toast('تم التصدير (نسخة مبسطة بدون إنترنت) ✅');
+  }
+}
+
+/* ===== النسخ الاحتياطي ===== */
+function exportData(){
+  let b=new Blob([JSON.stringify({app:'ONE SERVE',data:D},null,2)],{type:'application/json'}),a=document.createElement('a');
+  a.href=URL.createObjectURL(b);a.download='one-serve-'+today()+'.json';a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),500);toast('تم تنزيل النسخة ✅');
+}
+function importData(e){
+  let file=e.target.files[0];if(!file)return;let r=new FileReader;
+  r.onload=()=>{try{let x=JSON.parse(r.result);if(!x.data.students)throw 0;D=x.data;norm();save();refreshFilters();refreshAll();toast('تم استيراد النسخة ✅')}catch(z){toast('الملف غير صالح')}};
+  r.readAsText(file);
+}
+async function share(){
+  try{if(navigator.share)await navigator.share({title:'أسرة معلم الأجيال 2026-2027',text:'نظام خدمة مدارس الأحد',url:location.href});
+  else{await navigator.clipboard.writeText(location.href);toast('تم نسخ الرابط ✅')}}catch(e){}
+}
+function demo(){
+  [['مينا فادي','رابعة ابتدائي','2000-03-14','أبونا بيشوي','أعزب','مهندس','القاهرة - شبرا'],
+   ['كيرلس سامح','رابعة ابتدائي','1998-09-02','أبونا بولس','مخطوب','محاسب','الجيزة - فيصل'],
+   ['جورج نبيل','خامسة ابتدائي','1995-12-21','أبونا بيشوي','متزوج','طبيب','القاهرة - مصر الجديدة'],
+   ['مارك شنودة','سادسة ابتدائي','2002-06-30','أبونا بولس','أعزب','طالب جامعي','حلوان']
+  ].forEach(([n,c,b,f,m,j,a])=>D.students.push({id:uid(),name:n,className:c,phone:'',birth:b,confessor:f,marital:m,job:j,address:a,createdAt:Date.now()}));
+  save();refreshFilters();refreshAll();toast('تمت إضافة بيانات تجريبية ✅');
+}
+function resetData(){
+  if(!confirm('مسح كل البيانات من هذا الجهاز؟'))return;
+  D={students:[],attendance:{},liturgy:{},prepAtt:{},meetingAtt:{},preps:{},homework:{},reflections:{},points:[]};
+  save();clearForm();refreshFilters();refreshAll();toast('تم مسح البيانات');
+}
+function showAbout(){$('aboutModal').style.display='grid'}
+function hideAbout(){$('aboutModal').style.display='none'}
+function toast(m){let t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(window.tt);window.tt=setTimeout(()=>t.classList.remove('show'),2200)}
+
+init();
+</script>
+</body></html>
